@@ -34,6 +34,7 @@ enum combos {
 	GUI_R,
 	ALT_L,
 	ALT_R,
+	BKSPC,
 	SYS_LYR,
 	FN_LYR,
 	PG_DN,
@@ -42,6 +43,7 @@ enum combos {
 	END,
 	ESC,
 	TAB,
+	TMUX,
 };
 
 const uint16_t PROGMEM shift_l[] = {KC_P, KC_T, COMBO_END};
@@ -72,6 +74,7 @@ combo_t key_combos[COMBO_COUNT] = {
 	[GUI_R] = COMBO(gui_r, KC_LGUI),
 	[ALT_L] = COMBO(alt_l, KC_LALT),
 	[ALT_R] = COMBO(alt_r, KC_LALT),
+	[BKSPC] = COMBO(bkspc, KC_BSPC),
 	[SYS_LYR] = COMBO(sys_lyr, MO(_SYS)),
 	[FN_LYR] = COMBO(fn_lyr, MO(_FN)),
 	[PG_DN] = COMBO(pg_dn, KC_PGDN),
@@ -80,6 +83,7 @@ combo_t key_combos[COMBO_COUNT] = {
 	[END] = COMBO(end, KC_END),
 	[ESC] = COMBO(esc, KC_ESC),
 	[TAB] = COMBO(tab, KC_TAB),
+	[TMUX] = COMBO(tmux, C(KC_A)),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
